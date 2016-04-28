@@ -20,9 +20,6 @@ class GameScene: SKScene {
     var playButton: MSButtonNode!
     var pauseButton: MSButtonNode!
     
-    /* Simulation sequence */
-    var simulation: SKAction!
-    
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
         
@@ -61,7 +58,7 @@ class GameScene: SKScene {
         let stepSequence = SKAction.sequence([delay,callMethod])
         
         /* Create an infinite simulation loop */
-        simulation = SKAction.repeatActionForever(stepSequence)
+        let simulation = SKAction.repeatActionForever(stepSequence)
         
         /* Run simulation action */
         self.runAction(simulation)

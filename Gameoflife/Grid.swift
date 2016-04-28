@@ -168,7 +168,7 @@ class Grid: SKSpriteNode {
             /* Grab position of touch relative to the grid */
             let location    = touch.locationInNode(self)
             
-            /* Caculate grid array position */
+            /* Caclulate grid array position */
             let gridX = Int(location.x) / cellWidth
             let gridY = Int(location.y) / cellHeight
             
