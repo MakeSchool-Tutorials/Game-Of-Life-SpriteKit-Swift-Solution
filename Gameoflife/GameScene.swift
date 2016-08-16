@@ -20,18 +20,18 @@ class GameScene: SKScene {
     var playButton: MSButtonNode!
     var pauseButton: MSButtonNode!
     
-    override func didMoveToView(view: SKView) {
+    override func didMove(to view: SKView) {
         /* Setup your scene here */
         
         /* Connect scene objects */
-        gridNode = childNodeWithName("gridNode") as! Grid
+        gridNode = childNode(withName: "gridNode") as! Grid
         
         /* Connect UI scene objects */
-        stepButton = childNodeWithName("stepButton") as! MSButtonNode
-        populationLabel = childNodeWithName("populationLabel") as! SKLabelNode
-        generationLabel = childNodeWithName("generationLabel") as! SKLabelNode
-        playButton = childNodeWithName("playButton") as! MSButtonNode
-        pauseButton = childNodeWithName("pauseButton") as! MSButtonNode
+        stepButton = childNode(withName: "stepButton") as! MSButtonNode
+        populationLabel = childNode(withName: "populationLabel") as! SKLabelNode
+        generationLabel = childNode(withName: "generationLabel") as! SKLabelNode
+        playButton = childNode(withName: "playButton") as! MSButtonNode
+        pauseButton = childNode(withName: "pauseButton") as! MSButtonNode
         
         /* Setup testing button selected handler */
         stepButton.selectedHandler = {
@@ -40,39 +40,39 @@ class GameScene: SKScene {
         
         /* Setup play button selected handler */
         playButton.selectedHandler = {
-            self.paused = false
+            self.isPaused = false
         }
         
         /* Setup pause button selected handler */
         pauseButton.selectedHandler = {
-            self.paused = true
+            self.isPaused = true
         }
         
         /* Create an SKAction based timer, 0.5 second delay */
-        let delay = SKAction.waitForDuration(0.5)
+        let delay = SKAction.wait(forDuration: 0.5)
         
         /* Call the stepSimulation() method to advance the simulation */
-        let callMethod = SKAction.performSelector(#selector(GameScene.stepSimulation), onTarget: self)
+        let callMethod = SKAction.perform(#selector(GameScene.stepSimulation), onTarget: self)
         
         /* Create the delay,step cycle */
         let stepSequence = SKAction.sequence([delay,callMethod])
         
         /* Create an infinite simulation loop */
-        let simulation = SKAction.repeatActionForever(stepSequence)
+        let simulation = SKAction.repeatForever(stepSequence)
         
         /* Run simulation action */
-        self.runAction(simulation)
+        self.run(simulation)
         
         /* Default simulation to pause state */
-        self.paused = true
+        self.isPaused = true
 
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         /* Called when a touch begins */
     }
    
-    override func update(currentTime: CFTimeInterval) {
+    override func update(_ currentTime: TimeInterval) {
         /* Called before each frame is rendered */
     }
     

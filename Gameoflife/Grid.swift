@@ -43,7 +43,7 @@ class Grid: SKSpriteNode {
         }
     }
     
-    func addCreatureAtGrid(x x: Int, y: Int) {
+    func addCreatureAtGrid(x: Int, y: Int) {
         /* Add a new creature at grid position*/
         
         /* New creature object */
@@ -159,14 +159,14 @@ class Grid: SKSpriteNode {
         
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         /* Called when a touch begins */
         
         /* There will only be one touch as multi touch is not enabled by default */
         for touch in touches {
             
             /* Grab position of touch relative to the grid */
-            let location    = touch.locationInNode(self)
+            let location    = touch.location(in: self)
             
             /* Caclulate grid array position */
             let gridX = Int(location.x) / cellWidth
@@ -183,7 +183,7 @@ class Grid: SKSpriteNode {
         super.init(coder: aDecoder)
         
         /* Enable own touch implementation for this node */
-        userInteractionEnabled = true
+        isUserInteractionEnabled = true
         
         /* Calculate individual cell dimensions */
         cellWidth = Int(size.width) / columns
