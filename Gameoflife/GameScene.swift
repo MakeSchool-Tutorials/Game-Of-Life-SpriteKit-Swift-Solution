@@ -35,16 +35,19 @@ class GameScene: SKScene {
         
         /* Setup testing button selected handler */
         stepButton.selectedHandler = {
+            [unowned self] in
             self.stepSimulation()
         }
         
         /* Setup play button selected handler */
         playButton.selectedHandler = {
+            [unowned self] in
             self.isPaused = false
         }
         
         /* Setup pause button selected handler */
         pauseButton.selectedHandler = {
+            [unowned self] in
             self.isPaused = true
         }
         
