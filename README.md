@@ -23,7 +23,7 @@ Upon completing this tutorial, you will have learned how to:
 ## Common issues :bug:
 - 'Optional' or 'Nil' errors with code connections may be due to an incorrectly named node in the GameScene.sks file
 - Faulty or unresponsive buttons usually result from not changing a node's class to MSButtonNode
-- Jet fuel can't melt steal beams
+- Be careful with 2D Array traversal code. Common errors include index-out-of-bounds and nil value errors.
 
 ## What you should understand when finished :checkered_flag:
 - The Grid Class: Created this subclass of SKSpriteNode and built a self-contained simulation node
