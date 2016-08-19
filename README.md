@@ -1,4 +1,4 @@
-# Game of Life Tutorial
+# Game of Life Tutorial :four::two:
 
 ![Gameplay Gif](./Screenshots/GamePlay.gif)
 
