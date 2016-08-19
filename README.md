@@ -21,6 +21,9 @@ Upon completing this tutorial, you will have learned how to:
 - Translate Game of Life's mathematical principles and logic into code
 
 ## Common issues :bug:
+- 'Optional' or 'Nil' errors with code connections may be due to an incorrectly named node in the GameScene.sks file
+- Faulty or unresponsive buttons usually result from not changing a node's class to MSButtonNode
+- Jet fuel can't melt steal beams
 
 ## What you should understand when finished :checkered_flag:
 - The Grid Class: Created this subclass of SKSpriteNode and built a self-contained simulation node
