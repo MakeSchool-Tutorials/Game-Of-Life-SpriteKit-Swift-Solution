@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5B65CA081CCD692C004A9CFD /* MSButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65C9F91CCD692C004A9CFD /* MSButtonNode.swift */; };
-		5B65CA091CCD692C004A9CFD /* MSReferenceNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65C9FA1CCD692C004A9CFD /* MSReferenceNode.swift */; };
 		5B65CA0A1CCD692C004A9CFD /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65C9FC1CCD692C004A9CFD /* CGFloat+Extensions.swift */; };
 		5B65CA0B1CCD692C004A9CFD /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65C9FD1CCD692C004A9CFD /* CGPoint+Extensions.swift */; };
 		5B65CA0C1CCD692C004A9CFD /* CGVector+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65C9FE1CCD692C004A9CFD /* CGVector+Extensions.swift */; };
@@ -53,7 +52,6 @@
 
 /* Begin PBXFileReference section */
 		5B65C9F91CCD692C004A9CFD /* MSButtonNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSButtonNode.swift; sourceTree = "<group>"; };
-		5B65C9FA1CCD692C004A9CFD /* MSReferenceNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSReferenceNode.swift; sourceTree = "<group>"; };
 		5B65C9FC1CCD692C004A9CFD /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		5B65C9FD1CCD692C004A9CFD /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
 		5B65C9FE1CCD692C004A9CFD /* CGVector+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGVector+Extensions.swift"; sourceTree = "<group>"; };
@@ -114,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				5B65C9F91CCD692C004A9CFD /* MSButtonNode.swift */,
-				5B65C9FA1CCD692C004A9CFD /* MSReferenceNode.swift */,
 				5B65C9FB1CCD692C004A9CFD /* SKTUtils */,
 			);
 			path = Utils;
@@ -142,9 +139,9 @@
 		5B9676E01CC8FB3B005FFA67 = {
 			isa = PBXGroup;
 			children = (
-				5B9676EB1CC8FB3B005FFA67 /* Gameoflife */,
-				5B9677041CC8FB3B005FFA67 /* GameoflifeTests */,
-				5B96770F1CC8FB3B005FFA67 /* GameoflifeUITests */,
+				5B9676EB1CC8FB3B005FFA67 /* GameOfLife */,
+				5B9677041CC8FB3B005FFA67 /* GameOfLifeTests */,
+				5B96770F1CC8FB3B005FFA67 /* GameOfLifeUITests */,
 				5B9676EA1CC8FB3B005FFA67 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -159,7 +156,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5B9676EB1CC8FB3B005FFA67 /* Gameoflife */ = {
+		5B9676EB1CC8FB3B005FFA67 /* GameOfLife */ = {
 			isa = PBXGroup;
 			children = (
 				5B65C9F81CCD692C004A9CFD /* Utils */,
@@ -174,24 +171,27 @@
 				5B9677281CC90798005FFA67 /* Grid.swift */,
 				5B96772A1CCCCF9D005FFA67 /* Creature.swift */,
 			);
+			name = GameOfLife;
 			path = Gameoflife;
 			sourceTree = "<group>";
 		};
-		5B9677041CC8FB3B005FFA67 /* GameoflifeTests */ = {
+		5B9677041CC8FB3B005FFA67 /* GameOfLifeTests */ = {
 			isa = PBXGroup;
 			children = (
 				5B9677051CC8FB3B005FFA67 /* GameoflifeTests.swift */,
 				5B9677071CC8FB3B005FFA67 /* Info.plist */,
 			);
+			name = GameOfLifeTests;
 			path = GameoflifeTests;
 			sourceTree = "<group>";
 		};
-		5B96770F1CC8FB3B005FFA67 /* GameoflifeUITests */ = {
+		5B96770F1CC8FB3B005FFA67 /* GameOfLifeUITests */ = {
 			isa = PBXGroup;
 			children = (
 				5B9677101CC8FB3B005FFA67 /* GameoflifeUITests.swift */,
 				5B9677121CC8FB3B005FFA67 /* Info.plist */,
 			);
+			name = GameOfLifeUITests;
 			path = GameoflifeUITests;
 			sourceTree = "<group>";
 		};
@@ -258,7 +258,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Make School";
 				TargetAttributes = {
 					5B9676E81CC8FB3B005FFA67 = {
@@ -277,7 +277,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5B9676E41CC8FB3B005FFA67 /* Build configuration list for PBXProject "Gameoflife" */;
+			buildConfigurationList = 5B9676E41CC8FB3B005FFA67 /* Build configuration list for PBXProject "GameOfLife" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -331,7 +331,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B65CA0C1CCD692C004A9CFD /* CGVector+Extensions.swift in Sources */,
-				5B65CA091CCD692C004A9CFD /* MSReferenceNode.swift in Sources */,
 				5B65CA111CCD692C004A9CFD /* SKNode+Extensions.swift in Sources */,
 				5B9676F11CC8FB3B005FFA67 /* GameScene.swift in Sources */,
 				5B65CA0E1CCD692C004A9CFD /* SKAction+Extensions.swift in Sources */,
@@ -416,8 +415,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -461,8 +462,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -481,6 +484,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -491,6 +495,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Gameoflife/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.Gameoflife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -503,6 +508,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Gameoflife/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.Gameoflife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -520,7 +526,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.GameoflifeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gameoflife.app/Gameoflife";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameOfLife.temp_caseinsensitive_rename.app/GameOfLife.temp_caseinsensitive_rename";
 			};
 			name = Debug;
 		};
@@ -533,7 +539,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.GameoflifeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gameoflife.app/Gameoflife";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameOfLife.temp_caseinsensitive_rename.app/GameOfLife.temp_caseinsensitive_rename";
 			};
 			name = Release;
 		};
@@ -567,7 +573,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5B9676E41CC8FB3B005FFA67 /* Build configuration list for PBXProject "Gameoflife" */ = {
+		5B9676E41CC8FB3B005FFA67 /* Build configuration list for PBXProject "GameOfLife" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5B9677131CC8FB3B005FFA67 /* Debug */,
